@@ -8,22 +8,30 @@
 */
 
 function draculaInject() {
-    var a = document.querySelectorAll('.mtk14')
-    var b = document.querySelectorAll('.mtk7')
-    var c = document.querySelectorAll('.mtk5')
-    var d = document.querySelectorAll('.mtk1')
-    var e = document.querySelectorAll('.mtk4')
-    var f = document.querySelectorAll('.mtk9')
-    var g = document.querySelectorAll('main > div')
-    var h = document.querySelectorAll('.current-line')
-    a.forEach(e => { e.style.color = "#8be9fd" })
-    b.forEach(e => { e.style.color = "#bd93f9" })
-    c.forEach(e => { e.style.color = "#f1fa8c" })
-    d.forEach(e => { e.style.color = "#f8f8f2" })
-    e.forEach(e => { e.style.color = "#50fa7b" })
-    f.forEach(e => { e.style.color = "#6272a4" })
-    g.forEach(e => { e.style.backgroundColor = "#282a36" })
-    h.forEach(e => { e.style.backgroundColor = "#44475a" })
+    var m = new MutationObserver(_ => {
+        var a = document.querySelectorAll('.mtk14')
+        var b = document.querySelectorAll('.mtk7')
+        var c = document.querySelectorAll('.mtk5')
+        var d = document.querySelectorAll('.mtk1')
+        var e = document.querySelectorAll('.mtk4')
+        var f = document.querySelectorAll('.mtk9')
+        var g = document.querySelectorAll('main > div')
+        var h = document.querySelectorAll('.current-line')
+        a.forEach(e => { e.style.color = "#8be9fd" })
+        b.forEach(e => { e.style.color = "#bd93f9" })
+        c.forEach(e => { e.style.color = "#f1fa8c" })
+        d.forEach(e => { e.style.color = "#f8f8f2" })
+        e.forEach(e => { e.style.color = "#50fa7b" })
+        f.forEach(e => { e.style.color = "#6272a4" })
+        g.forEach(e => { e.style.backgroundColor = "#282a36" })
+        h.forEach(e => { e.style.backgroundColor = "#44475a" })
+    })
+    m.observe(document.getElementById('root'), {
+        attributes: true,
+        characterData: true,
+        childList: true,
+        subtree: true
+    })
 }
 
 var injected = false
