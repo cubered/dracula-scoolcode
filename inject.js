@@ -9,14 +9,14 @@
 
 function draculaInject() {
     var m = new MutationObserver(_ => {
-       a = document.querySelectorAll('.mtk14').forEach(e => { e.style.color = "#8be9fd" })
-       b = document.querySelectorAll('.mtk7').forEach(e => { e.style.color = "#bd93f9" })
-       c = document.querySelectorAll('.mtk5').forEach(e => { e.style.color = "#f1fa8c" })
-       d = document.querySelectorAll('.mtk1').forEach(e => { e.style.color = "#f8f8f2" })
-       e = document.querySelectorAll('.mtk4').forEach(e => { e.style.color = "#50fa7b" })
-       f = document.querySelectorAll('.mtk9').forEach(e => { e.style.color = "#6272a4" })
-       g = document.querySelectorAll('main > div').forEach(e => { e.style.backgroundColor = "#282a36" })
-       h = document.querySelectorAll('.current-line').forEach(e => { e.style.backgroundColor = "#44475a" })
+      document.querySelectorAll('.mtk14').forEach(e => { e.style.color = "#8be9fd" })
+      document.querySelectorAll('.mtk7').forEach(e => { e.style.color = "#bd93f9" })
+      document.querySelectorAll('.mtk5').forEach(e => { e.style.color = "#f1fa8c" })
+      document.querySelectorAll('.mtk1').forEach(e => { e.style.color = "#f8f8f2" })
+      document.querySelectorAll('.mtk4').forEach(e => { e.style.color = "#50fa7b" })
+      document.querySelectorAll('.mtk9').forEach(e => { e.style.color = "#6272a4" })
+      document.querySelectorAll('main > div').forEach(e => { e.style.backgroundColor = "#282a36" })
+      document.querySelectorAll('.current-line').forEach(e => { e.style.backgroundColor = "#44475a" })
     })
     m.observe(document.getElementById('root'), {
         attributes: true,
